@@ -8,7 +8,8 @@ const LoginStart = ({ navigation }) => {
   const handleLogin = () => {
     console.log('Username:', username);
     console.log('Password:', password);
-    navigation.navigate('Home');
+    // Navigate to the tab navigator after login
+    navigation.navigate('AppTabs');
   };
 
   return (
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   button: {
-    backgroundColor: '#',
+    backgroundColor: '#DBF4A7',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
