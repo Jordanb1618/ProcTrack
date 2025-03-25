@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import Navigation from './Navigation';
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
       <Navigation />
@@ -17,3 +17,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+export default App;

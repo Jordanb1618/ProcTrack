@@ -1,0 +1,25 @@
+type Workout @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  userID: String!
+  type: String!
+  duration: Int!
+  date: AWSDateTime!
+  notes: String
+  exercises: [Exercise]
+}
+
+type Exercise {
+  name: String!
+  sets: Int
+  reps: Int
+  weight: Float
+}
+
+type UserStats @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  userID: String!
+  totalWorkouts: Int!
+  totalDuration: Int!
+  workoutsByType: AWSJSON
+  lastUpdated: AWSDateTime!
+}
